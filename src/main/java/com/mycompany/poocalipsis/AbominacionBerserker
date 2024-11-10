@@ -1,0 +1,16 @@
+// Subclase para Abominación Berserker
+class AbominacionBerserker extends Zombi {
+    public AbominacionBerserker() {
+        super(3, 1, "Abominación Berserker");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Abominación Berserker eliminada.");
+        } else {
+            System.out.println("La Abominación Berserker es inmune a ataques a distancia.");
+        }
+    }
+}
