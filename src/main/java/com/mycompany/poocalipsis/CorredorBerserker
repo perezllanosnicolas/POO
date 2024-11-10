@@ -1,0 +1,15 @@
+class CorredorBerserker extends Zombi {
+    public CorredorBerserker() {
+        super(1, 2, "Corredor Berserker");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Corredor Berserker eliminado.");
+        } else {
+            System.out.println("El Corredor Berserker es inmune a ataques a distancia.");
+        }
+    }
+}
