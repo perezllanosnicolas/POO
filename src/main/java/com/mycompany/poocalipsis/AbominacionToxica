@@ -1,0 +1,14 @@
+// Subclase para Abominación Tóxica
+class AbominacionToxica extends Zombie.Zombi {
+    public AbominacionToxico() {
+        super(3, 1, "Abominación Tóxica");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Abominación Tóxica eliminada.");
+        }
+    }
+}
