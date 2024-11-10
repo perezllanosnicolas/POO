@@ -1,0 +1,14 @@
+// Subclase para Caminante Tóxico
+class CaminanteToxico extends Zombi {
+    public CaminanteToxico() {
+        super(1, 1, "Caminante Tóxico");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Caminante Tóxico eliminado.");
+        }
+    }
+}
