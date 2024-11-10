@@ -1,0 +1,14 @@
+// Subclase para Abominación Normal
+class AbominacionNormal extends Zombi {
+    public AbominacionNormal() {
+        super(3, 1, "Abominación Normal");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Abominación Normal eliminada.");
+        }
+    }
+}
