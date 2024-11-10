@@ -1,0 +1,14 @@
+// Subclase para Corredor Normal
+class CorredorNormal extends Zombi {
+    public CorredorNormal() {
+        super(1, 2, "Corredor Normal");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Corredor Normal eliminado.");
+        }
+    }
+}
