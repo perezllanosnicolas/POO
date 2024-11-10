@@ -1,0 +1,16 @@
+// Subclase para Caminante Berserker
+class CaminanteBerserker extends Zombi {
+    public CaminanteBerserker() {
+        super(1, 1, "Caminante Berserker");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Caminante Berserker eliminado.");
+        } else {
+            System.out.println("El Caminante Berserker es inmune a ataques a distancia.");
+        }
+    }
+}
