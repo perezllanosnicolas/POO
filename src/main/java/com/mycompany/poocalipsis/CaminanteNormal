@@ -1,0 +1,14 @@
+// Subclase para Caminante Normal
+class CaminanteNormal extends Zombi {
+    public CaminanteNormal() {
+        super(1, 1, "Caminante Normal");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Caminante Normal eliminado.");
+        }
+    }
+}
