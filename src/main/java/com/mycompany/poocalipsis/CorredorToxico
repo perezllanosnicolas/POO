@@ -1,0 +1,14 @@
+// Subclase para Corredor Tóxico
+class CorredorToxico extends Zombi {
+    public CorredorToxico() {
+        super(1, 2, "Corredor Tóxico");
+    }
+
+    @Override
+    public void reaccionarAlAtaque(int potencia) {
+        if (potencia >= getAguante()) {
+            setVivo(false);
+            System.out.println("Corredor Tóxico eliminado.");
+        }
+    }
+}
